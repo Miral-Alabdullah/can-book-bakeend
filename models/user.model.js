@@ -14,7 +14,7 @@ const userModel = new mongoose.model('user', userSchema);
 
 const seedUserData = () => {
 	const newUser = new userModel({
-		email: 'leenhazaimeh94@gmail.com',
+		email: 'miral.alabdallah@gmail.com',
 		books: [
 			{
 				name: 'Breaking Point',
