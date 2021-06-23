@@ -1,5 +1,7 @@
 'user strict';
+
 const userModel = require('../models/user.model');
+
 const getBooks = (req, res) => {
 	const { email } = req.query;
 	userModel.findOne({ email: email }, (error, user) => {
@@ -37,6 +39,7 @@ const updateBook = (request, response) => {
 		}
 	});
 }
+
 const deleteBook = (request, response) => {
 	const bookIndex = request.params.book_idx;
 	const { email } = request.query;
@@ -50,6 +53,7 @@ const deleteBook = (request, response) => {
 		}
 	});
 }
+
 module.exports = {
 	getBooks,
 	createBook,
